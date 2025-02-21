@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Manrope;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; 
+    background-color: hsl(210, 46%, 95%);
+}
+main{
+    display: flex;
+}
+.drawer{
+    height: 300px;
+    width: 370px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+section{
+    height: 300px;
+    width: 480px;
+    padding: 1.1em;
+    padding-right: 40px;
+    font-size: 1rem;
+    line-height:26px;
+    color: hsl(214, 17%, 51%);
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.heading-text{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+    margin-bottom: 15px;
+}
+footer{
+    height: 45px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button{
+    height: 40px;
+    width: 40px;
+    border: transparent;
+    border-radius:50px;
+    cursor: pointer;
+}
+button img {
+    filter: brightness(1);
+}
+
+button:hover img {
+    filter: brightness(0) invert(1); 
+}
+button:hover{
+    background-color: #6e8098;
+}
+.profile{
+    display: flex;
+    gap: 10px;
+}
+.avatar{
+    height: 45px;
+    width: 45px;
+    border-radius: 50px;
+}
+.name-date{
+    line-height: 20px;
+}
+.name{
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+}
+.date{
+    font-size: 14px;
+    color: hsl(212, 23%, 69%);
+}
+
+/* tooltip content */
+.hidden {
+    width: 200px;
+    height: 45px;
+    position: absolute;
+    transform: translate(-70px, -90px);
+    font-size: 1rem; 
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding-left:15px;
+    visibility: hidden;
+    border-radius: 10px;
+}
+.hidden p{
+    font-size: .9rem;
+    font-weight: 200;
+}
+.hidden img{
+    margin-left: 15px;
+}
+.hidden::before {
+    content: "";
+    border-radius: 10px;
+    position: relative;
+    font-size: inherit; 
+}
+.hidden::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid red;
+    top: 100%;
+    left: 40%;
+}
+
+button:focus .hidden {
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+    visibility: visible;
+}
+button:focus .hidden::after{
+    border-top-color: hsl(217, 19%, 35%);
+}
+button:hover .hidden {
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+    visibility: visible;
+}
+button:hover .hidden::after{
+    border-top-color: hsl(217, 19%, 35%);
+}
+.share-responsive{
+    display: none;
+
+    gap: 25px;
+    width: 80%;
+    padding-left: 25px;
+}
